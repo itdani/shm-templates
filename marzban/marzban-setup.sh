@@ -7,30 +7,6 @@ set -e
 echo "Configure Marzban server host..."
 PAYLOAD="$(cat <<-EOF
 {
-  "VMess TCP": [
-    {
-      "remark": "🚀 Marz ({USERNAME}) [{PROTOCOL} - {TRANSPORT}]",
-      "address": "$SERVER_HOST",
-      "port": null,
-      "sni": null,
-      "host": null,
-      "security": "inbound_default",
-      "alpn": "",
-      "fingerprint": ""
-    }
-  ],
-  "VMess Websocket": [
-    {
-      "remark": "🚀 Marz ({USERNAME}) [{PROTOCOL} - {TRANSPORT}]",
-      "address": "$SERVER_HOST",
-      "port": null,
-      "sni": null,
-      "host": null,
-      "security": "inbound_default",
-      "alpn": "",
-      "fingerprint": ""
-    }
-  ],
   "VLESS TCP REALITY": [
     {
       "remark": "🚀 Marz ({USERNAME}) [{PROTOCOL} - {TRANSPORT}]",
@@ -40,42 +16,7 @@ PAYLOAD="$(cat <<-EOF
       "host": null,
       "security": "inbound_default",
       "alpn": "",
-      "fingerprint": ""
-    }
-  ],
-  "VLESS GRPC REALITY": [
-    {
-      "remark": "🚀 Marz ({USERNAME}) [{PROTOCOL} - {TRANSPORT}]",
-      "address": "$SERVER_HOST",
-      "port": null,
-      "sni": null,
-      "host": null,
-      "security": "inbound_default",
-      "alpn": "",
-      "fingerprint": ""
-    }
-  ],
-  "Trojan Websocket TLS": [
-    {
-      "remark": "🚀 Marz ({USERNAME}) [{PROTOCOL} - {TRANSPORT}]",
-      "address": "$SERVER_HOST",
-      "port": null,
-      "sni": null,
-      "host": null,
-      "security": "inbound_default",
-      "alpn": "",
-      "fingerprint": ""
-    }
-  ],
-  "Shadowsocks TCP": [
-    {
-      "remark": "🚀 Marz ({USERNAME}) [{PROTOCOL} - {TRANSPORT}]",
-      "address": "$SERVER_HOST",
-      "port": null,
-      "sni": null,
-      "host": null,
-      "security": "inbound_default",
-      "alpn": "",
+      "flow": "xtls-rprx-vision",
       "fingerprint": ""
     }
   ]
