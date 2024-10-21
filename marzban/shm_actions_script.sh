@@ -94,12 +94,7 @@ case $EVENT in
         {
           "username": "us_{{ us.id }}",
           "proxies": {
-            "vmess": {},
-            "vless": {"flow": "xtls-rprx-vision"},
-            "trojan": {},
-            "shadowsocks": {
-              "method": "chacha20-ietf-poly1305"
-            }
+            "vless": {"flow": "xtls-rprx-vision"}
           },
           "data_limit": 0,
           "expire": null,
@@ -107,19 +102,8 @@ case $EVENT in
           "status": "active",
           "note": "SHM_info- {{ user.login }}, {{ user.full_name }}, https://t.me/{{ user.settings.telegram.login }}",
           "inbounds": {
-            "vmess": [
-              "VMess TCP",
-              "VMess Websocket"
-            ],
             "vless": [
-              "VLESS TCP REALITY",
-              "VLESS GRPC REALITY"
-            ],
-            "trojan": [
-              "Trojan Websocket TLS"
-            ],
-            "shadowsocks": [
-              "Shadowsocks TCP"
+              "VLESS TCP REALITY"
             ]
           }
         }
