@@ -63,14 +63,14 @@ case $EVENT in
         echo "Install Marzban..."
         export SUDO_USERNAME=admin
         export SUDO_PASSWORD=$(pwgen -n 16 -1)
-        bash -c "$(curl -sL https://github.com/danuk/shm-templates/raw/main/marzban/marzban.sh)" @ install
+        bash -c "$(curl -sL https://github.com/itdani/shm-templates/raw/main/marzban/marzban.sh)" @ install
         echo "done"
         echo
 
         echo "Setup Marzban..."
         sleep 25
         get_marzban_token
-        bash -c "$(curl -sL https://github.com/danuk/shm-templates/raw/main/marzban/marzban-setup.sh)"
+        bash -c "$(curl -sL https://github.com/itdani/shm-templates/raw/main/marzban/marzban-setup.sh)"
         echo "done"
 
         echo "Check SHM API host: $API_URL"
