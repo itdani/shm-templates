@@ -68,7 +68,7 @@ case $EVENT in
         echo
 
         echo "Setup Marzban..."
-        sleep 5
+        sleep 25
         get_marzban_token
         bash -c "$(curl -sL https://github.com/danuk/shm-templates/raw/main/marzban/marzban-setup.sh)"
         echo "done"
